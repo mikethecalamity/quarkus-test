@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    plugins {
+        id "${quarkusPluginId}" version "${quarkusPluginVersion}"
+    }
+}
+
+include 'plugin-api'
+include 'plugin1'
+include 'plugin2'
+include 'service1'
+//include 'service2'
+include 'service3'
+
+rootProject.name = 'quarkus-test'
+
+for (project in rootProject.children) {
+    def projectDirName = project.name.toLowerCase()
+    project.projectDir = file("modules/$projectDirName")
+}

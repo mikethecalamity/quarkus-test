@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'io.quarkus' apply false
+}
+
+allprojects {
+    group = 'my.project'
+    version = '0.0.0'
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    dependencies {
+        implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    }
+}

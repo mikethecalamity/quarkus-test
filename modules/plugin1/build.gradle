@@ -1,0 +1,12 @@
+plugins {
+    id 'java-library'
+}
+
+description = 'Plugin 1'
+version = '1.0.0'
+
+dependencies {
+    implementation project(':plugin-api')
+    
+    implementation 'jakarta.enterprise:jakarta.enterprise.cdi-api'
+}
