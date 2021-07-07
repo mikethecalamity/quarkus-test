@@ -9,6 +9,5 @@ dependencies {
     implementation project(':plugin-api')
     runtimeOnly project(':plugin1')
  
-    implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-resteasy'
 }

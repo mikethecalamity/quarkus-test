@@ -13,7 +13,7 @@ include 'plugin-api'
 include 'plugin1'
 include 'plugin2'
 include 'service1'
-//include 'service2'
+include 'service2'
 include 'service3'
 
 rootProject.name = 'quarkus-test'

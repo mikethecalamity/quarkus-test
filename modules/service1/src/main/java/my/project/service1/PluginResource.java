@@ -16,9 +16,8 @@ import my.project.plugin.Plugin;
 @Path("/hello")
 public class PluginResource {
 
-    @Inject
-    @Any
-    Instance<Plugin> plugins;
+    @Inject @Any
+    private Instance<Plugin> plugins;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)

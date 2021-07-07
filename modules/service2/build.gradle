@@ -2,13 +2,10 @@ plugins {
     id 'io.quarkus'
 }
 
-description = 'Service 1'
+description = 'Service 2'
 version = '1.0.0'
 
 dependencies {
-    implementation project(':plugin-api')
-    runtimeOnly project(':plugin1')
- 
-    implementation 'io.quarkus:quarkus-arc'
-    implementation 'io.quarkus:quarkus-resteasy'
+    runtimeOnly project(':service1')
+    runtimeOnly project(':plugin2')
 }
