@@ -6,6 +6,8 @@ description = 'Service 2'
 version = '1.0.0'
 
 dependencies {
-    runtimeOnly project(':service1')
+    implementation project(':service1')
     runtimeOnly project(':plugin2')
+
+    implementation 'io.quarkus:quarkus-resteasy'
 }

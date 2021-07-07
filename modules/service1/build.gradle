@@ -6,8 +6,6 @@ description = 'Service 1'
 version = '1.0.0'
 
 dependencies {
-    implementation project(':plugin-api')
-    runtimeOnly project(':plugin1')
- 
     implementation 'io.quarkus:quarkus-resteasy'
+    runtimeOnly 'io.smallrye.config:smallrye-config-source-yaml'
 }
