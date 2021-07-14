@@ -1,3 +1,4 @@
 app:
   test:
     name: "Test"
+  other: "thing"
