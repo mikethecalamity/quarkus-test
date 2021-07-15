@@ -1,5 +1,8 @@
 package my.project.service1;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -16,14 +19,14 @@ public class PluginResource {
     @ConfigProperty(name = "app.other")
     String other;
 
-    @ConfigMapping(prefix = "app.test")
-    Service1Config config;
+    @ConfigMapping(prefix = "app.items")
+    List<Service1Config> config;
 
     @GET
-    @Path("name")
+    @Path("names")
     @Produces(MediaType.TEXT_PLAIN)
-    public String name() {
-        return this.config.name();
+    public List<String> names() {
+        return this.config.stream().map(Service1Config::name).collect(Collectors.toList());
     }
 
     @GET
