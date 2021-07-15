@@ -1,4 +1,4 @@
-package my.project.service3;
+package my.project.service1;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -7,7 +7,9 @@ import javax.annotation.ManagedBean;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("service")
+import my.project.service3.PluginResource;
+
+@ApplicationPath("service3")
 @ManagedBean
 public class Service3Application extends Application {
 
