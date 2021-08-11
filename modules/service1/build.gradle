@@ -6,8 +6,8 @@ description = 'Service 1'
 version = '1.0.0'
 
 dependencies {
-    implementation 'org.eclipse.microprofile.config:microprofile-config-api'
+    implementation project(':plugin-api')
+    runtimeOnly project(':plugin1')
+
     implementation 'io.quarkus:quarkus-resteasy'
-    implementation 'io.smallrye.config:smallrye-config'
-    runtimeOnly 'io.quarkus:quarkus-config-yaml'
 }

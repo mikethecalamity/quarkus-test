@@ -9,6 +9,7 @@ pluginManagement {
     }
 }
 
+include 'lib1'
 include 'plugin-api'
 include 'plugin1'
 include 'plugin2'

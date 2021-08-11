@@ -20,5 +20,7 @@ subprojects {
 
     dependencies {
         implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+        
+        implementation 'jakarta.ws.rs:jakarta.ws.rs-api:2.1.6'
     }
 }

@@ -4,8 +4,9 @@ quarkus:
 
 app:
   other: thing
-  items:
-    - name: name1
-      num: 1
-    - name: name2
-      num: 2
+  test:
+    items:
+      - name: name1
+        num: 1
+      - name: name2
+        num: 2

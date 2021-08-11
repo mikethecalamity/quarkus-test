@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:jre-11.0.11_9-alpine
 
-ARG SERVICE=service1
+ARG SERVICE=service2
 
 ENV WORK_DIR=/opt/deployment
 ENV JAVA_OPTS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
