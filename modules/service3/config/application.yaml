@@ -3,10 +3,9 @@ quarkus:
     port: 8080
 
 app:
-  other: thing
-  test:
-    items:
-      - name: name1
-        num: 1
-      - name: name2
-        num: 2
+  data1:
+    name: Bob
+    num: 100
+  data2:
+    name: Tim
+    num: 30
