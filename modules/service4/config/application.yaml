@@ -1,0 +1,7 @@
+quarkus:
+  http:
+    port: 8080
+
+app:
+  handler2:
+    config: Hello
