@@ -16,7 +16,6 @@ public class Service3Application extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> set = new HashSet<>();
-        set.add(Service3Resource.class);
         set.add(LibResource.class);
         return set;
     }

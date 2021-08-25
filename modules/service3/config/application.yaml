@@ -3,9 +3,11 @@ quarkus:
     port: 8080
 
 app:
-  data1:
-    name: Bob
-    num: 100
-  data2:
-    name: Tim
-    num: 30
+  other: thing
+  config:
+    my-config:
+      name: Bob
+      num: 100
+    their-config:
+      name: Tim
+      num: 30
