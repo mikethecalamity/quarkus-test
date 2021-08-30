@@ -7,8 +7,6 @@ import javax.annotation.ManagedBean;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-import my.project.lib1.LibResource;
-
 @ApplicationPath("service3")
 @ManagedBean
 public class Service3Application extends Application {
@@ -16,7 +14,7 @@ public class Service3Application extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> set = new HashSet<>();
-        set.add(LibResource.class);
+        set.add(Service3Resource.class);
         return set;
     }
 }

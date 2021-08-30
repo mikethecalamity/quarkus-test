@@ -13,6 +13,13 @@ public class Service3Resource {
     Service3Handler handler;
 
     @GET
+    @Path("value0")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String value0() {
+        return this.handler.getValue0();
+    }
+
+    @GET
     @Path("value1")
     @Produces(MediaType.TEXT_PLAIN)
     public String value1() {
