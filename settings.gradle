@@ -18,6 +18,7 @@ include 'service1'
 include 'service2'
 include 'service3'
 include 'service4'
+include 'service5'
 
 rootProject.name = 'quarkus-test'
 
