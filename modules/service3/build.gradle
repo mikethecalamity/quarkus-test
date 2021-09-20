@@ -10,7 +10,7 @@ dependencies {
 
     implementation 'org.eclipse.microprofile.config:microprofile-config-api'
     implementation 'io.quarkus:quarkus-arc'
+    implementation 'io.quarkus:quarkus-config-yaml'
     implementation 'io.quarkus:quarkus-resteasy'
     implementation 'io.smallrye.config:smallrye-config'
-    runtimeOnly 'io.quarkus:quarkus-config-yaml'
 }

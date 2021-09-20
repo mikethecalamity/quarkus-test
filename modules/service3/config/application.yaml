@@ -4,10 +4,3 @@ quarkus:
 
 app:
   other: thing
-  config:
-    my-config:
-      name: Bob
-      num: 100
-    their-config:
-      name: Tim
-      num: 30
