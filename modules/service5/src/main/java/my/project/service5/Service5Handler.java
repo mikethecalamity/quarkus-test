@@ -14,12 +14,15 @@ public class Service5Handler {
     private final String value1;
     private final String value2;
 
+    @ConfigMapping(prefix = "app.config")
+    private Optional<Config> config;
+
     @Inject
-    public Service5Handler(@ConfigMapping(prefix = "app.config") final Optional<Config> config) {
-        if (config.isPresent()) {
-            this.value0 = Boolean.toString(config.get().enabled());
-            this.value1 = config.get().name();
-            this.value2 = Integer.toString(config.get().num());
+    public Service5Handler() {
+        if (this.config.isPresent()) {
+            this.value0 = Boolean.toString(this.config.get().enabled());
+            this.value1 = this.config.get().name();
+            this.value2 = Integer.toString(this.config.get().num());
         }
         else {
             this.value0 = "value0";
