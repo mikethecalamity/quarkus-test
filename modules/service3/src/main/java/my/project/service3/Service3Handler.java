@@ -36,112 +36,38 @@ public class Service3Handler {
         return this.value2;
     }
 
-    /**
-     * Configuration for JMS
-     */
     @ConfigMapping(prefix = "app.jms")
     interface JmsConfig {
 
-        /**
-         * @return boolean indicating if listeners that are annotated and not in the configuration should be ignored
-         */
         @WithDefault("true")
         boolean ignoreAnnotatedListeners();
 
-        /**
-         * @return the JMS sessions
-         */
         Optional<List<JmsSessionConfig>> sessions();
-
-        /**
-         * @return the JMS listeners
-         */
         Optional<List<JmsListenerConfig>> listeners();
     }
 
-    /**
-     * Configuration for JMS session
-     */
     interface JmsSessionConfig {
-
-        /**
-         * @return the session name
-         */
         Optional<String> name();
-
-        /**
-         * @return the session URI
-         */
         Optional<String> uri();
-
-        /**
-         * @return the session username
-         */
         Optional<String> username();
-
-        /**
-         * @return the session password
-         */
         Optional<String> password();
-
-        /**
-         * @return the session acknowledgement option
-         */
         Optional<Integer> ackOption();
-
-        /**
-         * @return the session connection factory fully qualified class name
-         */
         Optional<String> connectionFactory();
     }
 
-    /**
-     * Configuration for JMS listener
-     */
     interface JmsListenerConfig {
 
-        /**
-         * @return flag indicating if this listener is disabled or not
-         */
         @WithDefault("false")
         boolean disabled();
 
-        /**
-         * @return flag indicating if annotations should be ignored for this listener
-         */
         @WithDefault("true")
         boolean ignoreAnnotated();
 
-        /**
-         * @return the listener fully qualified class name
-         */
         String listenerClass();
-
-        /**
-         * @return the listener session name
-         */
         String session();
-
-        /**
-         * @return the listener pool size
-         */
         Optional<Integer> poolSize();
-
-        /**
-         * @return the listener flag indicating if is asynchronous
-         */
         Optional<Boolean> async();
-
-        /**
-         * @return the listener queues
-         */
         Optional<List<String>> queues();
-
-        /**
-         * @return the listener topics
-         */
         Optional<List<String>> topics();
     }
-
-
 }
