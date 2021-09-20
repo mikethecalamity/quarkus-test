@@ -1,4 +1,4 @@
-package my.project.service3;
+package my.project.service5;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -7,10 +7,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("test")
-public class Service3Resource {
+public class Service5Resource {
 
     @Inject
-    Service3Handler handler;
+    Service5Handler handler;
 
     @GET
     @Path("value0")

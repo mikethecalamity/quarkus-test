@@ -1,4 +1,4 @@
-package my.project.service3;
+package my.project.service5;
 
 import java.util.Optional;
 
@@ -8,14 +8,14 @@ import javax.inject.Inject;
 import io.smallrye.config.ConfigMapping;
 
 @Dependent
-public class Service3Handler {
+public class Service5Handler {
 
     private final String value0;
     private final String value1;
     private final String value2;
 
     @Inject
-    public Service3Handler(@ConfigMapping(prefix = "app.config") final Optional<Config> config) {
+    public Service5Handler(@ConfigMapping(prefix = "app.config") final Optional<Config> config) {
         if (config.isPresent()) {
             this.value0 = Boolean.toString(config.get().enabled());
             this.value1 = config.get().name();
