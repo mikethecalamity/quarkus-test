@@ -5,5 +5,5 @@ quarkus:
 app:
   config:
     enabled: true
-    name: Bob
-    num: 3
+    name: Jeff
+    num: 5

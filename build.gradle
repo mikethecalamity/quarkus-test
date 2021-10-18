@@ -18,6 +18,12 @@ allprojects {
 subprojects {
     apply plugin: 'java'
 
+	configurations.all {
+	    resolutionStrategy { 
+	        force 'io.smallrye.config:smallrye-config:2.5.1'
+	    }
+	}
+
     dependencies {
         implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
         

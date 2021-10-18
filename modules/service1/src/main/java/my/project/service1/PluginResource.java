@@ -11,6 +11,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import io.smallrye.config.ConfigMapping;
 import my.project.plugin.Plugin;
 
 @Path("test")
@@ -20,10 +21,26 @@ public class PluginResource {
     @Any
     Instance<Plugin> plugins;
 
+    @Inject
+    Service1Config config;
+
+    @GET
+    @Path("name")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String name() {
+        return this.config.name();
+    }
+
     @GET
     @Path("plugins")
     @Produces(MediaType.TEXT_PLAIN)
     public List<String> plugins() {
         return this.plugins.stream().map(Plugin::getName).collect(Collectors.toList());
+    }
+
+    @ConfigMapping(prefix = "app.config")
+    interface Service1Config {
+        String name();
+        int num();
     }
 }

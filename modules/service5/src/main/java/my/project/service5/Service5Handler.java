@@ -1,7 +1,5 @@
 package my.project.service5;
 
-import java.util.Optional;
-
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 
@@ -15,17 +13,10 @@ public class Service5Handler {
     private final String value2;
 
     @Inject
-    public Service5Handler(@ConfigMapping(prefix = "app.config") final Optional<Config> config) {
-        if (config.isPresent()) {
-            this.value0 = Boolean.toString(config.get().enabled());
-            this.value1 = config.get().name();
-            this.value2 = Integer.toString(config.get().num());
-        }
-        else {
-            this.value0 = "value0";
-            this.value1 = "value1";
-            this.value2 = "value2";
-        }
+    public Service5Handler(@ConfigMapping(prefix = "app.config") final Config config) {
+        this.value0 = Boolean.toString(config.enabled());
+        this.value1 = config.name();
+        this.value2 = Integer.toString(config.num());
     }
 
     public String getValue0() {
@@ -41,7 +32,7 @@ public class Service5Handler {
     }
 
     /**
-     * Configuration for JMS
+     * Configuration
      */
     interface Config {
         boolean enabled();

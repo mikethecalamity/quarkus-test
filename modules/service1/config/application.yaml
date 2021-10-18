@@ -4,6 +4,5 @@ quarkus:
 
 app:
   config:
-    enabled: true
     name: Bob
-    num: 3
+    num: 14

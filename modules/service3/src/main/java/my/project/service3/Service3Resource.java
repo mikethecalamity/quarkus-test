@@ -16,7 +16,7 @@ public class Service3Resource {
     @Path("value0")
     @Produces(MediaType.TEXT_PLAIN)
     public String value0() {
-        return this.handler.getValue0();
+        return this.handler.getValue0().toString();
     }
 
     @GET

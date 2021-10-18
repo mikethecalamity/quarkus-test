@@ -3,4 +3,11 @@ quarkus:
     port: 8080
 
 app:
-  other: thing
+  config:
+    map-configs:
+      - name: Bob
+        foo: thing
+        bar: false
+      - name: Tim
+        baz: stuff
+        qux: 3
