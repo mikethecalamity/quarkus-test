@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.quarkus' apply false
+    id 'org.cyclonedx.bom' version '1.4.0' apply false
 }
 
 allprojects {
@@ -20,7 +21,7 @@ subprojects {
 
 	configurations.all {
 	    resolutionStrategy { 
-	        force 'io.smallrye.config:smallrye-config:2.5.1'
+	        force 'io.smallrye.config:smallrye-config:2.6.0'
 	    }
 	}
 
