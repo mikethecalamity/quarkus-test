@@ -1,4 +1,5 @@
 plugins {
+    id 'jacoco'
     id 'io.quarkus'
     id 'org.cyclonedx.bom'
 }
@@ -11,4 +12,27 @@ dependencies {
     implementation project(':plugin1')
 
     implementation 'io.quarkus:quarkus-resteasy'
+    implementation 'org.apache.logging.log4j:log4j-api'
+    runtimeOnly 'org.jboss.logmanager:log4j2-jboss-logmanager'
+    
+    testImplementation 'io.quarkus:quarkus-junit5'
+    testImplementation 'org.mockito:mockito-junit-jupiter'
+}
+
+test {
+    finalizedBy jacocoTestReport
+}
+jacocoTestReport {
+    dependsOn test
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                counter = 'LINE'
+                minimum = 1.0
+            }
+        }
+    }
 }

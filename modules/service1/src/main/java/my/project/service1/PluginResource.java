@@ -11,11 +11,16 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import io.smallrye.config.ConfigMapping;
 import my.project.plugin.Plugin;
 
 @Path("test")
 public class PluginResource {
+
+    private static final Logger LOGGER = LogManager.getLogger();
 
     @Inject
     @Any
@@ -35,6 +40,11 @@ public class PluginResource {
     @Path("plugins")
     @Produces(MediaType.TEXT_PLAIN)
     public List<String> plugins() {
+
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("TEST");
+        }
+
         return this.plugins.stream().map(Plugin::getName).collect(Collectors.toList());
     }
 
