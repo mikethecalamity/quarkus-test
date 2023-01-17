@@ -1,0 +1,13 @@
+plugins {
+    id 'io.quarkus'
+}
+
+description = 'Service 2'
+version = '1.0.0'
+
+dependencies {
+    runtimeOnly 'my.project.common:plugin2'
+    runtimeOnly project(':service1')
+
+    implementation 'io.quarkus:quarkus-resteasy-reactive'
+}

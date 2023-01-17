@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'common'
+
+include 'lib1'
+include 'lib2'
+include 'plugin-api'
+include 'plugin1'
+include 'plugin2'
+
+for (project in rootProject.children) {
+    def projectDirName = project.name.toLowerCase()
+    project.projectDir = file("subprojects/$projectDirName")
+}

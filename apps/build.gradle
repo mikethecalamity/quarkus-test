@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'io.quarkus' apply false
+    id 'org.cyclonedx.bom' version '1.6.1' apply false
+}
+
+allprojects {
+    group = 'my.project.app'
+    version = '0.0.0'
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    dependencies {
+        implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+        
+        implementation 'jakarta.ws.rs:jakarta.ws.rs-api:2.1.6'
+        implementation 'org.apache.logging.log4j:log4j-api:2.17.2'
+    }
+}

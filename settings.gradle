@@ -9,20 +9,7 @@ pluginManagement {
     }
 }
 
-include 'lib1'
-include 'lib2'
-include 'plugin-api'
-include 'plugin1'
-include 'plugin2'
-include 'service1'
-include 'service2'
-include 'service3'
-include 'service4'
-include 'service5'
-
 rootProject.name = 'quarkus-test'
 
-for (project in rootProject.children) {
-    def projectDirName = project.name.toLowerCase()
-    project.projectDir = file("modules/$projectDirName")
-}
+includeBuild('apps')
+includeBuild('common')

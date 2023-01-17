@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    plugins {
+        id "${quarkusPluginId}" version "${quarkusPluginVersion}"
+    }
+}
+
+rootProject.name = 'apps'
+
+includeBuild('../common')
+
+include 'service1'
+include 'service2'
+include 'service3'
+include 'service4'
+include 'service5'
+
+for (project in rootProject.children) {
+    def projectDirName = project.name.toLowerCase()
+    project.projectDir = file("subprojects/$projectDirName")
+}
