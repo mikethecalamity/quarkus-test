@@ -9,6 +9,8 @@ dependencies {
     implementation 'org.eclipse.microprofile.config:microprofile-config-api'
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-config-yaml'
+    implementation 'io.quarkus:quarkus-kubernetes'
+    implementation 'io.quarkus:quarkus-kubernetes-config'
     implementation 'io.quarkus:quarkus-resteasy-reactive'
     implementation 'io.smallrye.config:smallrye-config'
 }

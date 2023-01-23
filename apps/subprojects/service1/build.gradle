@@ -5,12 +5,13 @@ plugins {
 }
 
 description = 'Service 1'
-version = '1.0.0'
 
 dependencies {
     implementation 'my.project.common:plugin-api'
     implementation 'my.project.common:plugin1'
 
+    implementation 'io.quarkus:quarkus-kubernetes'
+    implementation 'io.quarkus:quarkus-kubernetes-config'
     implementation 'io.quarkus:quarkus-resteasy-reactive'
     implementation 'org.apache.logging.log4j:log4j-api'
     runtimeOnly 'org.jboss.logmanager:log4j2-jboss-logmanager'
@@ -34,5 +35,12 @@ jacocoTestCoverageVerification {
                 minimum = 1.0
             }
         }
+    }
+}
+
+quarkusBuild {
+    doFirst {
+        println "VERSION"
+        println project.version
     }
 }
