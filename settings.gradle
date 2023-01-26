@@ -1,14 +1,3 @@
-pluginManagement {
-    repositories {
-        mavenLocal()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-    plugins {
-        id "${quarkusPluginId}" version "${quarkusPluginVersion}"
-    }
-}
-
 rootProject.name = 'quarkus-test'
 
 includeBuild('apps')
