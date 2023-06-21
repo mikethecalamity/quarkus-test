@@ -1,12 +1,13 @@
 plugins {
-    id 'io.quarkus'
+    id 'my.project.gradle-plugin.base-project'
+    id 'my.project.gradle-plugin.quarkus'
 }
 
 description = 'Service 3'
 version = '1.0.0'
 
 dependencies {
-    implementation 'my.project.common:lib2'
+    //implementation 'my.project.common:lib2'
 
     implementation 'org.eclipse.microprofile.config:microprofile-config-api'
     implementation 'io.quarkus:quarkus-arc'

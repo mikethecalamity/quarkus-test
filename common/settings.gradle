@@ -8,6 +8,8 @@ pluginManagement {
 
 rootProject.name = 'common'
 
+includeBuild('../plugins')
+
 include 'lib1'
 include 'lib2'
 include 'plugin-api'

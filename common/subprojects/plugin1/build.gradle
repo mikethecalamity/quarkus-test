@@ -1,5 +1,6 @@
 plugins {
     id 'java-library'
+    id 'my.project.gradle-plugin.base-project'
 }
 
 description = 'Plugin 1'

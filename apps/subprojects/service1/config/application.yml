@@ -11,6 +11,9 @@ quarkus:
         min-level: TRACE
 
 app:
+  my-list:
+    - thing1
+    - thing2
   config:
     name: Bob
     num: 14

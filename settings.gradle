@@ -1,4 +1,5 @@
 rootProject.name = 'quarkus-test'
 
-includeBuild('apps')
+includeBuild('plugins')
 includeBuild('common')
+includeBuild('apps')

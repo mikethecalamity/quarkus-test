@@ -1,0 +1,22 @@
+quarkus:
+  http:
+    port: 8080
+  log:
+    console:
+      format: "%d{HH:mm:ss.SSS} [%t] %-5p %c{36} - %m%n"
+    level: WARN
+    category:
+      "my.project":
+        level: INFO
+        min-level: TRACE
+
+app:
+  list: []
+  config:
+    map-configs:
+      - name: Bob
+        foo: thing
+        bar: false
+      - name: Tim
+        baz: stuff
+        qux: 3

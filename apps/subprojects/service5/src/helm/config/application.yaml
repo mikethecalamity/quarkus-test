@@ -1,9 +1,0 @@
-quarkus:
-  http:
-    port: 8080
-
-app:
-  config:
-    enabled: true
-    name: Jeff
-    num: 5

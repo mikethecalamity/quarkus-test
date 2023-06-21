@@ -13,6 +13,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import io.smallrye.config.ConfigMapping;
 import my.project.plugin.Plugin;
@@ -22,12 +23,22 @@ public class PluginResource {
 
     private static final Logger LOGGER = LogManager.getLogger();
 
+    @ConfigProperty(name = "app.my-list")
+    List<String> myList;
+
+    @Inject
+    Service1Config config;
+
     @Inject
     @Any
     Instance<Plugin> plugins;
 
-    @Inject
-    Service1Config config;
+    @GET
+    @Path("list")
+    @Produces(MediaType.TEXT_PLAIN)
+    public List<String> test() {
+        return this.myList;
+    }
 
     @GET
     @Path("name")

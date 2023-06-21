@@ -4,20 +4,17 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
-    plugins {
-        id "${quarkusPluginId}" version "${quarkusVersion}"
-    }
 }
 
 rootProject.name = 'apps'
 
+includeBuild('../plugins')
 includeBuild('../common')
 
 include 'service1'
 include 'service2'
 include 'service3'
 include 'service4'
-include 'service5'
 
 for (project in rootProject.children) {
     def projectDirName = project.name.toLowerCase()
