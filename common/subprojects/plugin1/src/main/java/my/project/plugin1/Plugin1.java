@@ -1,6 +1,6 @@
 package my.project.plugin1;
 
-import javax.enterprise.context.Dependent;
+import jakarta.enterprise.context.Dependent;
 
 import my.project.plugin.Plugin;
 

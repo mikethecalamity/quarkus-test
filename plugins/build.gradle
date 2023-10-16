@@ -15,7 +15,7 @@ dependencies {
     compileOnly gradleApi()
     compileOnly localGroovy()
     implementation 'com.github.spotbugs.snom:spotbugs-gradle-plugin:5.0.14'
-    implementation 'io.quarkus:gradle-application-plugin:2.15.3.Final'
+    implementation 'io.quarkus:gradle-application-plugin:3.3.3'
 }
 
 gradlePlugin {

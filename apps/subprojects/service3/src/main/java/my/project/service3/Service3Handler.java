@@ -3,8 +3,8 @@ package my.project.service3;
 import java.util.List;
 import java.util.Map;
 
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
 
 import io.smallrye.config.ConfigMapping;
 
