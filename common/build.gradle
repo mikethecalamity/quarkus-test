@@ -14,11 +14,10 @@ allprojects {
 subprojects {
     afterEvaluate {
         dependencies {       
+            implementation enforcedPlatform('jakarta.platform:jakarta.jakartaee-bom:10.0.0')
             implementation enforcedPlatform('org.apache.logging.log4j:log4j-bom:2.20.0')
 
-            implementation 'jakarta.enterprise:jakarta.enterprise.cdi-api:2.0.2'
-            implementation 'jakarta.ws.rs:jakarta.ws.rs-api:2.1.6'
-            implementation 'org.eclipse.microprofile.config:microprofile-config-api:2.0.1'
+            implementation 'org.eclipse.microprofile.config:microprofile-config-api:3.0.3'
         }
     }
 }
