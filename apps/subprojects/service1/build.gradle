@@ -9,38 +9,29 @@ dependencies {
     implementation 'my.project.common:plugin-api'
     implementation 'my.project.common:plugin1'
 
-	implementation 'io.quarkus:quarkus-config-yaml'
+    implementation 'io.quarkus:quarkus-config-yaml'
+    implementation 'io.quarkus:quarkus-hibernate-orm'
+    implementation 'io.quarkus:quarkus-jdbc-postgresql'
     implementation 'io.quarkus:quarkus-kubernetes'
     implementation 'io.quarkus:quarkus-kubernetes-config'
+    implementation 'io.quarkus:quarkus-logging-json'
+    implementation 'io.quarkus:quarkus-rest-client-reactive'
+    implementation 'io.quarkus:quarkus-rest-client-reactive-jackson'
     implementation 'io.quarkus:quarkus-resteasy-reactive'
-    implementation 'org.apache.logging.log4j:log4j-api'
+    implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
+    implementation 'io.quarkus:quarkus-smallrye-context-propagation'
+    implementation 'io.quarkus:quarkus-smallrye-health'
+    implementation 'io.quarkus:quarkus-smallrye-openapi'
+    implementation 'io.quarkus:quarkus-undertow'
+
+    quarkusDev 'io.quarkus:quarkus-jdbc-h2'
+
     runtimeOnly 'org.jboss.logmanager:log4j2-jboss-logmanager'
     
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'org.mockito:mockito-junit-jupiter'
 }
 
-test {
-    finalizedBy jacocoTestReport
-}
-jacocoTestReport {
-    dependsOn test
-}
-
-jacocoTestCoverageVerification {
-    violationRules {
-        rule {
-            limit {
-                counter = 'LINE'
-                minimum = 0.0
-            }
-        }
-    }
-}
-
-quarkusBuild {
-    doFirst {
-        println "VERSION"
-        println project.version
-    }
+quarkusDev {
+    workingDir = projectDir
 }

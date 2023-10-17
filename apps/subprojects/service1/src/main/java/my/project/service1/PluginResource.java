@@ -3,6 +3,9 @@ package my.project.service1;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
+import io.smallrye.config.ConfigMapping;
 import javax.enterprise.inject.Any;
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
@@ -10,18 +13,10 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-
-import io.smallrye.config.ConfigMapping;
 import my.project.plugin.Plugin;
 
-@Path("test")
+@Path("plugin")
 public class PluginResource {
-
-    private static final Logger LOGGER = LogManager.getLogger();
 
     @ConfigProperty(name = "app.my-list")
     List<String> myList;
@@ -51,11 +46,6 @@ public class PluginResource {
     @Path("plugins")
     @Produces(MediaType.TEXT_PLAIN)
     public List<String> plugins() {
-
-        if (LOGGER.isDebugEnabled()) {
-            LOGGER.debug("TEST");
-        }
-
         return this.plugins.stream().map(Plugin::getName).collect(Collectors.toList());
     }
 

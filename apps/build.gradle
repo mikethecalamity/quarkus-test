@@ -15,7 +15,10 @@ subprojects {
         dependencies {
             implementation enforcedPlatform('io.quarkus:quarkus-bom:2.15.3.Final')
             implementation enforcedPlatform('org.apache.logging.log4j:log4j-bom:2.20.0')
-            
+
+            compileOnly 'org.projectlombok:lombok:1.18.30'
+	        annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
             implementation 'jakarta.ws.rs:jakarta.ws.rs-api:2.1.6'
         }
     }
