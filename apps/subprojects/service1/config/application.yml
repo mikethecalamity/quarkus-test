@@ -3,7 +3,8 @@ quarkus:
     port: 8080
   log:
     console:
-      format: "%d{HH:mm:ss.SSS} [%t] %-5p %c{36} - %m%n
+      json: false
+      format: "%d{HH:mm:ss.SSS} [%t] %-5p %c{36} - %m%n"
     level: WARN
     category:
       "my.project":
@@ -17,3 +18,29 @@ app:
   config:
     name: Bob
     num: 14
+
+"%prod":
+  quarkus:
+    datasource:
+      db-kind: postgresql
+      jdbc:
+        background-validation-interval: 20S
+        idle-removal-interval: 30S
+        max-size: 10
+        min-size: 0
+        url: jdbc:postgresql://172.17.0.2:5432/postgres?user=postgres&ApplicationName=my-project&reWriteBatchedInserts=true
+      username: postgres
+
+"%dev":
+  quarkus:
+    hibernate-orm:
+      database:
+        generation: drop-and-create
+    datasource:
+      db-kind: h2
+      jdbc:
+        background-validation-interval: 20S
+        idle-removal-interval: 30S
+        max-size: 10
+        min-size: 0
+        url: jdbc:h2:mem:default
