@@ -10,6 +10,7 @@ rootProject.name = 'common'
 
 includeBuild('../plugins')
 
+include 'providers'
 include 'lib1'
 include 'lib2'
 include 'plugin-api'
