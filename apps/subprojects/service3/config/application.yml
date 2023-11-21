@@ -1,0 +1,17 @@
+quarkus:
+  http:
+    port: 8083
+  log:
+    console:
+      json: false
+      format: "%d{HH:mm:ss.SSS} [%t] %-5p %c{36} - %m%n"
+    level: WARN
+    category:
+      "my.project":
+        level: INFO
+        min-level: TRACE
+
+app:
+  other: thing
+  list:
+    - thing
