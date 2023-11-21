@@ -1,6 +1,9 @@
 quarkus:
   http:
-    port: 8080
+    port: 8084
+  rest-client:
+    service3:
+      url: http://172.17.0.4:8083
 
 app:
   handler2:

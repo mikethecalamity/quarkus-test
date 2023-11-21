@@ -3,7 +3,7 @@ plugins {
     id 'my.project.gradle-plugin.quarkus'
 }
 
-description = 'Service 3'
+description = 'Service 4'
 version = '1.0.0'
 
 dependencies {
@@ -11,7 +11,9 @@ dependencies {
 
     implementation 'org.eclipse.microprofile.config:microprofile-config-api'
     implementation 'io.quarkus:quarkus-arc'
+    implementation 'io.quarkus:quarkus-rest-client-reactive'
+    implementation 'io.quarkus:quarkus-rest-client-reactive-jackson'
     implementation 'io.quarkus:quarkus-resteasy-reactive'
     implementation 'io.smallrye.config:smallrye-config'
-    runtimeOnly 'io.quarkus:quarkus-config-yaml'
+    implementation 'io.quarkus:quarkus-config-yaml'
 }
