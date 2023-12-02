@@ -23,4 +23,16 @@ public class DataManager {
         q.setParameter("time", time);
         return q.getResultStream().map(MyEntity::getId).collect(Collectors.toList());
     }
+
+    public void addData(int id, MyData data) {
+        final JsonEntity entity = new JsonEntity(id, data);
+        em.persist(entity);
+    }
+    
+    public List<MyData> getData(int id, int value) {
+        final TypedQuery<JsonEntity> q = em.createNamedQuery(JsonEntity.GET_DATA_WITH_FILTER, JsonEntity.class);
+        q.setParameter("id", id);
+        q.setParameter("value", value);
+        return q.getResultStream().map(JsonEntity::getData).collect(Collectors.toList());
+    }
 }
