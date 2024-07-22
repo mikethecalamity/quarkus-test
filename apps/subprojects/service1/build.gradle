@@ -23,6 +23,7 @@ dependencies {
     implementation 'io.quarkus:quarkus-smallrye-health'
     implementation 'io.quarkus:quarkus-smallrye-openapi'
     implementation 'io.quarkus:quarkus-undertow'
+    implementation 'org.apache.logging.log4j:log4j-api'
 
     quarkusDev 'io.quarkus:quarkus-jdbc-h2'
 
