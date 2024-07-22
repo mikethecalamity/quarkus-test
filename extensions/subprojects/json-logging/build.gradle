@@ -1,0 +1,20 @@
+plugins {
+    id 'java-library'
+    id 'my.project.gradle-plugin.base-project'
+    id 'my.project.gradle-plugin.quarkus-extension'
+}
+
+quarkusExtension {
+    deploymentModule = 'json-logging-deployment'
+    // https://github.com/quarkusio/quarkus/blob/8f878f78a3dd88df01705001acb6b87892600908/extensions/logging-json/runtime/pom.xml#L42
+    runnerParentFirstArtifacts = ['jakarta.json:jakarta.json-api','org.eclipse.parsson:parsson']
+}
+
+description = 'JSON logger for Quarkus'
+version = "${jsonLoggingVersion}"
+
+dependencies {
+    implementation 'io.quarkus:quarkus-core'
+    implementation 'io.quarkus:quarkus-jsonp'
+    implementation 'org.jboss.logmanager:jboss-logmanager'
+}

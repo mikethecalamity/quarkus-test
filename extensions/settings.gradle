@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'extensions'
+
+includeBuild('../plugins')
+
+include 'json-logging'
+include 'json-logging-deployment'
+
+for (project in rootProject.children) {
+    def projectDirName = project.name.toLowerCase()
+    project.projectDir = file("subprojects/$projectDirName")
+}

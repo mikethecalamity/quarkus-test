@@ -16,6 +16,7 @@ dependencies {
     compileOnly localGroovy()
     implementation 'com.github.spotbugs.snom:spotbugs-gradle-plugin:5.0.14'
     implementation 'io.quarkus:gradle-application-plugin:3.12.3'
+    implementation 'io.quarkus.extension:gradle-extension-plugin:3.12.3'
 }
 
 gradlePlugin {
@@ -47,6 +48,10 @@ gradlePlugin {
         quarkusPlugin {
             id = 'my.project.gradle-plugin.quarkus'
             implementationClass = 'my.project.gradle.plugins.QuarkusPlugin'
+        }
+        quarkusExtensionPlugin {
+            id = 'my.project.gradle-plugin.quarkus-extension'
+            implementationClass = 'my.project.gradle.plugins.QuarkusExtensionPlugin'
         }
     }
 }

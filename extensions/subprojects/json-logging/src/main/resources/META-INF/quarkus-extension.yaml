@@ -1,0 +1,7 @@
+---
+name: "Quarkus JSON Logging"
+metadata:
+  status: "preview"
+  unlisted: true
+group-id: my.project
+artifact-id: json-logging

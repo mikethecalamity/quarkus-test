@@ -1,0 +1,19 @@
+plugins {
+    id 'my.project.gradle-plugin.java'
+}
+
+allprojects {
+    group = 'my.project.quarkus'
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+subprojects {
+    afterEvaluate {
+        dependencies {
+            implementation enforcedPlatform('io.quarkus:quarkus-bom:3.12.3')
+        }
+    }
+}

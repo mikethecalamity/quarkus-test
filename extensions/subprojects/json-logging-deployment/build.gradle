@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+    id 'my.project.gradle-plugin.base-project'
+}
+
+javadoc {
+    enabled = false
+}
+
+version = "${jsonLoggingVersion}"
+
+dependencies {
+	implementation project(':json-logging')
+
+    implementation 'io.quarkus:quarkus-core'
+    implementation 'io.quarkus:quarkus-core-deployment'
+    implementation 'io.quarkus:quarkus-jsonp-deployment'
+}
