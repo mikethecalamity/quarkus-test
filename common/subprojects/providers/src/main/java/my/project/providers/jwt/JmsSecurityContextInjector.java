@@ -44,7 +44,7 @@ public class JmsSecurityContextInjector {
                 .collect(Collectors.toList());
 
         if (messages.isEmpty()) {
-            throw new IllegalStateException("No instance of javax.jms.Message was found in the method parameters."
+            throw new IllegalStateException("No instance of jakarta.jms.Message was found in the method parameters."
                     + " Did you mean to use this annotation?");
         }
 

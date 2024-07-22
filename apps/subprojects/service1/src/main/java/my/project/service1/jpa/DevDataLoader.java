@@ -2,9 +2,9 @@ package my.project.service1.jpa;
 
 import io.quarkus.arc.profile.IfBuildProfile;
 import io.quarkus.runtime.Startup;
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
+import jakarta.inject.Inject;
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
 
 @IfBuildProfile("dev")
 public class DevDataLoader {
