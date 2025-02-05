@@ -13,3 +13,7 @@ INSERT INTO my_table (id, time, assc_id, deleted) VALUES (8, 400, 40, true);
 INSERT INTO my_table (id, time, assc_id, deleted) VALUES (9, 300, 40, false);
 INSERT INTO my_table (id, time, assc_id, deleted) VALUES (10, 500, 40, false);
 INSERT INTO my_table (id, time, assc_id, deleted) VALUES (11, 550, 20, false);
+
+DROP TABLE IF EXISTS json_table;
+
+CREATE TABLE json_table (id BIGINT PRIMARY KEY, data JSONB);

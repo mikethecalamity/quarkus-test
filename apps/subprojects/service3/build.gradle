@@ -8,14 +8,26 @@ version = '1.0.0'
 
 dependencies {
     implementation 'my.project.common:lib1'
+    implementation 'my.project.common:plugin-api'
+    implementation 'my.project.common:plugin1'
+    implementation 'my.project.common:plugin2'
 
+    implementation 'jakarta.interceptor:jakarta.interceptor-api'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
     implementation 'org.eclipse.microprofile.config:microprofile-config-api'
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-config-yaml'
-    implementation 'io.quarkus:quarkus-rest-client-reactive'
-    implementation 'io.quarkus:quarkus-rest-client-reactive-jackson'
-    implementation 'io.quarkus:quarkus-resteasy-reactive'
-    implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
+    implementation 'io.quarkus:quarkus-rest-client'
+    implementation 'io.quarkus:quarkus-rest-client-jackson'
+    implementation 'io.quarkus:quarkus-rest'
+    implementation 'io.quarkus:quarkus-rest-jackson'
     implementation 'io.quarkus:quarkus-undertow'
     implementation 'io.smallrye.config:smallrye-config'
+
+    testImplementation 'io.quarkus:quarkus-junit5'
+    testImplementation 'io.quarkus:quarkus-junit5-mockito'
+    testImplementation 'io.rest-assured:rest-assured'
+    testImplementation 'org.assertj:assertj-core:3.27.3'
+    testImplementation 'org.awaitility:awaitility'
 }

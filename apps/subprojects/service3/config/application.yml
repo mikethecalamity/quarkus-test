@@ -3,7 +3,6 @@ quarkus:
     port: 8083
   log:
     console:
-      json: false
       format: "%d{HH:mm:ss.SSS} [%t] %-5p %c{36} - %m%n"
     level: WARN
     category:
@@ -15,3 +14,25 @@ app:
   other: thing
   list:
     - thing
+  order-a:
+    - shirt
+    - media
+    - entry
+    - buyer
+    - event
+    - steak
+    - actor
+    - uncle
+    - basis
+    - salad
+    - music
+    - owner
+    - video
+    - cheek
+    - hotel
+    - woman
+    - piano
+    - honey
+    - heart
+    - world
+  order-b: shirt,media,entry,buyer,event,steak,actor,uncle,basis,salad,music,owner,video,cheek,hotel,woman,piano,honey,heart,world

@@ -21,8 +21,9 @@ import lombok.NoArgsConstructor;
     @NamedQuery(name = MyEntity.GET_LATEST_AT_TIME,
             query = "SELECT m FROM MyEntity AS m WHERE (m.associatedId, m.time) IN"
                     + " (SELECT innerM.associatedId, max(innerM.time) FROM MyEntity AS innerM"
-                    + " WHERE innerM.time <= :time AND innerM.deleted = false"
-                    + " GROUP BY innerM.associatedId)")
+                    + " WHERE innerM.time >= :start AND innerM.time <= :end "
+                    + " AND innerM.deleted = false"
+                    + " GROUP BY id)")
 })
 class MyEntity implements Serializable {
 

@@ -14,11 +14,11 @@ subprojects {
     afterEvaluate {
         dependencies {
             implementation platform('jakarta.platform:jakarta.jakartaee-bom:10.0.0')
-            implementation enforcedPlatform('io.quarkus:quarkus-bom:3.12.3')
-            implementation enforcedPlatform('org.apache.logging.log4j:log4j-bom:2.23.1')
+            implementation enforcedPlatform('io.quarkus:quarkus-bom:3.18.1')
+            implementation enforcedPlatform('org.apache.logging.log4j:log4j-bom:2.24.3')
 
-            compileOnly 'org.projectlombok:lombok:1.18.34'
-            annotationProcessor 'org.projectlombok:lombok:1.18.34'
+            compileOnly 'org.projectlombok:lombok:1.18.36'
+	        annotationProcessor 'org.projectlombok:lombok:1.18.36'
         }
     }
 }

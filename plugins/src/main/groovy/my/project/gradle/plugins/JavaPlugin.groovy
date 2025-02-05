@@ -10,8 +10,8 @@ class JavaPlugin implements Plugin<Project> {
         project.plugins.apply org.gradle.api.plugins.JavaPlugin
 
         project.java {
-            sourceCompatibility = JavaVersion.VERSION_17
-            targetCompatibility = JavaVersion.VERSION_17
+            sourceCompatibility = JavaVersion.VERSION_11
+            targetCompatibility = JavaVersion.VERSION_11
             withJavadocJar()
             withSourcesJar()
         }

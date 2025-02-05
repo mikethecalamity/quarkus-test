@@ -9,21 +9,22 @@ dependencies {
     implementation 'my.project.common:plugin-api'
     implementation 'my.project.common:plugin1'
 
+    implementation 'jakarta.ws.rs:jakarta.ws.rs-api'
+
     implementation 'io.quarkus:quarkus-config-yaml'
     implementation 'io.quarkus:quarkus-hibernate-orm'
     implementation 'io.quarkus:quarkus-jdbc-postgresql'
     //implementation 'io.quarkus:quarkus-kubernetes'
     //implementation 'io.quarkus:quarkus-kubernetes-config'
     implementation 'io.quarkus:quarkus-logging-json'
-    implementation 'io.quarkus:quarkus-rest-client-reactive'
-    implementation 'io.quarkus:quarkus-rest-client-reactive-jackson'
-    implementation 'io.quarkus:quarkus-resteasy-reactive'
-    implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
+    implementation 'io.quarkus:quarkus-rest-client'
+    implementation 'io.quarkus:quarkus-rest-client-jackson'
+    implementation 'io.quarkus:quarkus-rest'
+    implementation 'io.quarkus:quarkus-rest-jackson'
     implementation 'io.quarkus:quarkus-smallrye-context-propagation'
     implementation 'io.quarkus:quarkus-smallrye-health'
     implementation 'io.quarkus:quarkus-smallrye-openapi'
     implementation 'io.quarkus:quarkus-undertow'
-    implementation 'org.apache.logging.log4j:log4j-api'
 
     quarkusDev 'io.quarkus:quarkus-jdbc-h2'
 

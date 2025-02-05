@@ -2,5 +2,4 @@ rootProject.name = 'quarkus-test'
 
 includeBuild('plugins')
 includeBuild('common')
-includeBuild('extensions')
 includeBuild('apps')

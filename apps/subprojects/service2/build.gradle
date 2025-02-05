@@ -10,5 +10,5 @@ dependencies {
     runtimeOnly 'my.project.common:plugin2'
     runtimeOnly project(':service1')
 
-    implementation 'io.quarkus:quarkus-resteasy-reactive'
+    implementation 'io.quarkus:quarkus-rest'
 }

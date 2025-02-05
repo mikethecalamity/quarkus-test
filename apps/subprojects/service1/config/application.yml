@@ -28,7 +28,7 @@ app:
         idle-removal-interval: 30S
         max-size: 10
         min-size: 0
-        url: jdbc:postgresql://172.17.0.2:5432/postgres?user=postgres&ApplicationName=my-project&reWriteBatchedInserts=true
+        url: jdbc:postgresql://172.17.0.3:5432/postgres?user=postgres&ApplicationName=my-project&reWriteBatchedInserts=true
       username: postgres
 
 "%dev":

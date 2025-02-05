@@ -11,8 +11,8 @@ quarkus:
         min-level: TRACE
   rest-client:
     connection-pool-size: 50
-    connect-timeout: 30_000
-    read-timeout: 30_000
+    connect-timeout: 30000
+    read-timeout: 30000
     providers:
       - my.project.providers.JacksonObjectMapperContextResolver
       - my.project.providers.jwt.JwtClientFilter

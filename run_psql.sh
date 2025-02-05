@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 service=$1
 
 # Pull and run the postgresql image

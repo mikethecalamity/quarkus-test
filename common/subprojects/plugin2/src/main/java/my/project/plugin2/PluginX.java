@@ -1,14 +1,14 @@
-package my.project.plugin1;
+package my.project.plugin2;
 
 import jakarta.enterprise.context.Dependent;
 
 import my.project.plugin.Plugin;
 
 @Dependent
-public class Plugin1 implements Plugin {
+public class PluginX implements Plugin {
 
     @Override
     public String getName() {
-        return "plugin1";
+        return "pluginX";
     }
 }
